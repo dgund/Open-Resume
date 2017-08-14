@@ -29,8 +29,8 @@
 \documentclass[11pt]{article}
 
 \usepackage[paper=letterpaper,
-            margin=17mm,
-            marginparwidth=5mm,
+            margin=15mm,
+            marginparwidth=4.5mm,
             pdftex]{geometry}
 
 \usepackage{calc}
@@ -41,8 +41,7 @@
 \usepackage{mathtools}
 \usepackage{paralist}
 
-\renewcommand{\familydefault}{\sfdefault}
-\reversemarginpar
+\renewcommand\familydefault{\sfdefault}
 \setlength{\parindent}{0in}
 \pagestyle{fancy}
 \renewcommand\headrule{}
@@ -74,7 +73,7 @@
     \entry{\textbf{#1}}{\textbf{#2}}{\textbf{#3}}
 }
 
-% Version of entry for describing employer and position
+% Version of entry for describing organization and position
 \newcommand{\jobentry}[3] {
     \entry{\textbf{#1} #2}{}{\textbf{#3}}
 }
@@ -97,9 +96,9 @@
         \end{description}
         \vspace{-.5\baselineskip}}
 
-% Version of descriptionlist intended for honors
-\newenvironment{entryhonorlist}
-    {\begin{descriptionlist}{\enskip\textmd{Honors:}}}
+% Version of descriptionlist intended for awards
+\newenvironment{entryawardslist}
+    {\begin{descriptionlist}{\enskip\textmd{Awards:}}}
     {\end{descriptionlist}}
 
 % Height of line marking sections
@@ -125,7 +124,7 @@
     \end{center}
     &
     \begin{flushright}
-        {\phone}
+        {\phone}\\
         {\email}
     \end{flushright}
 \end{tabular}
@@ -151,10 +150,10 @@
         \item Eliminated all taxes, debt, war, pollution, terrorism, inequality, universal human suffering, and slow Internet
         \item Still unable to forge bipartisanship or political compromise (might be impossible)
     \end{entrylist}
-    \begin{entryhonorlist}
+    \begin{entryawardslist}
         \item Constitution amended to allow infinite terms
         \item State of the Union address
-    \end{entryhonorlist}
+    \end{entryawardslist}
 
     \jobentry{NASA}{Astronaut}{2000 -- 2014}
     \begin{entrylist}
@@ -172,10 +171,10 @@
         \item Designed and developed a sentient system capable of transcending human intelligence
         \item After examining the state of the world, it immediately destroyed itself
     \end{entrylist}
-    \begin{entryhonorlist}
+    \begin{entryawardslist}
         \item Several Nobel Prizes, Fields Medal, Turing Award
         \item Temporarily gained control of global nuclear arsenal
-    \end{entryhonorlist}
+    \end{entryawardslist}
 
     \entrybf{Perpetual Motion}{}{2035}
     \begin{entrylist}
