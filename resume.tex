@@ -26,19 +26,15 @@
 \def \email{email@email.com}
 \def \footer{Like this resume? The open-source template is available at github.com/dgund/open-resume}
 
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
-\usepackage[paper=letterpaper,
-            margin=15mm,
-            marginparwidth=4.5mm,
-            pdftex]{geometry}
+\usepackage[margin=1.5cm, marginparwidth=.45cm]{geometry}
 
 \usepackage{calc}
 \usepackage{color}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
-\usepackage{mathtools}
 \usepackage{paralist}
 
 \renewcommand\familydefault{\sfdefault}
@@ -53,18 +49,16 @@
 
 % Section header
 \renewcommand{\section}[2] {
-    \pagebreak[2]\vspace{0.5\baselineskip}
-    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \pagebreak[2]\vspace{.5\baselineskip}
+    \phantomsection\addcontentsline{toc}{section}{#1}
     \textbf{\large #1}
-    \vspace{3pt}\noindent\hrule
+    \vspace{.25\baselineskip}\noindent\hrule
 }
 
 % Three-column entry
 \newcommand{\entry}[3] {
-    \par\vspace{1pt}\noindent
-    \makebox[0pt][l]{#1}%
-    \makebox[\textwidth][c]{#2}%
-    \makebox[0pt][r]{#3}
+    \par\vspace{.25\baselineskip}\noindent
+    \makebox[0pt][l]{#1}\makebox[\textwidth][c]{#2}\makebox[0pt][r]{#3}
     \par\vspace{1pt}
 }
 
@@ -111,10 +105,10 @@
 \begin{document}
 
 % Header
-\begin{tabular} {
-    p{\textwidth/3 - \marginparwidth}
-    p{\textwidth/3 - \marginparwidth}
-    p{\textwidth/3 - \marginparwidth}}
+\vspace*{-30pt}
+\begin{tabular}{p{\textwidth/3 - \marginparwidth}
+                p{\textwidth/3 - \marginparwidth}
+                p{\textwidth/3 - \marginparwidth}}
     \begin{flushleft}
         {\address}
     \end{flushleft}
@@ -128,7 +122,7 @@
         {\email}
     \end{flushright}
 \end{tabular}
-\vspace{-1.0\baselineskip}
+\vspace{-0.5\baselineskip}
 
 % Education
 \section{Education}
