@@ -22,13 +22,13 @@
 
 \def \name{Me}
 \def \address{Atlantis\\Location: REDACTED}
-\def \phone{+1 234 567 8900}
+\def \phone{(123) 456-7890}
 \def \email{email@email.com}
 \def \footer{Like this resume? The open-source template is available at github.com/dgund/open-resume}
 
 \documentclass[12pt]{article}
 
-\usepackage[margin=1.5cm, marginparwidth=.45cm]{geometry}
+\usepackage[margin=1.5cm, marginparwidth=.45cm, includefoot]{geometry}
 
 \usepackage{calc}
 \usepackage{color}
@@ -67,9 +67,9 @@
     \entry{\textbf{#1}}{\textbf{#2}}{\textbf{#3}}
 }
 
-% Version of entry for describing organization and position
-\newcommand{\jobentry}[3] {
-    \entry{\textbf{#1} #2}{}{\textbf{#3}}
+% Version of entry for describing organization and description
+\newcommand{\titledescriptionentry}[3] {
+    \entry{\textbf{#1} #2}{}{#3}
 }
 
 % Custom square bullet for lists
@@ -124,21 +124,11 @@
 \end{tabular}
 \vspace{-0.5\baselineskip}
 
-% Education
-\section{Education}
+% Experience
+\section{Experience}
 \noindent\rule{\textwidth}{\hlineheight}
 
-    \entrybf{Really Prestigious University}{The Moon}{1984 -- 1989}
-    \begin{entrylist}
-        \item PhD in Applied Everything
-        \item B.S. in Everything, with an additional major in Everything Twice (5.0 GPA)
-    \end{entrylist}
-
-% Employment
-\section{Employment}
-\noindent\rule{\textwidth}{\hlineheight}
-
-    \jobentry{United States of America}{President}{2016 -- 2028}
+    \titledescriptionentry{United States of America}{President -- Washington, DC}{2016 -- 2028}
     \begin{entrylist}
         \item Unanimously elected by every voter as a write-in candidate
         \item Eliminated all taxes, debt, war, pollution, terrorism, inequality, universal human suffering, and slow Internet
@@ -149,18 +139,28 @@
         \item State of the Union address
     \end{entryawardslist}
 
-    \jobentry{NASA}{Astronaut}{2000 -- 2014}
+    \titledescriptionentry{NASA}{Astronaut -- International Space Station}{2000 -- 2014}
     \begin{entrylist}
         \item Took hundreds of selfies in front of Earth while orbiting at over 8 kilometers per second
         \item Executed sweet back flips in microgravity
         \item Definitively cooler than you will ever be
     \end{entrylist}
 
+% Education
+\section{Education}
+\noindent\rule{\textwidth}{\hlineheight}
+
+    \titledescriptionentry{Really Prestigious University}{-- The Moon}{1984 -- 1989}
+    \begin{entrylist}
+        \item PhD in Applied Everything
+        \item B.S. in Everything, with an additional major in Everything Twice (5.0 GPA)
+    \end{entrylist}
+
 % Projects and Skills
 \section{Projects}
 \noindent\rule{\textwidth}{\hlineheight}
 
-    \entrybf{Artificial Intelligence}{}{2028}
+    \titledescriptionentry{Artificial Intelligence}{}{2028}
     \begin{entrylist}
         \item Designed and developed a sentient system capable of transcending human intelligence
         \item After examining the state of the world, it immediately destroyed itself
@@ -170,22 +170,22 @@
         \item Temporarily gained control of global nuclear arsenal
     \end{entryawardslist}
 
-    \entrybf{Perpetual Motion}{}{2035}
+    \titledescriptionentry{Perpetual Motion}{}{2035}
     \begin{entrylist}
         \item Created a perpetual motion machine that can do work indefinitely without energy input
         \item Produces infinite energy to power humanity
         \item Inspiration came after sleeping through lectures on thermodynamics
     \end{entrylist}
 
-    \entrybf{Magic}{}{2040 -- forever}
+    \titledescriptionentry{Magic}{}{2040 -- forever}
     \begin{entrylist}
         \item Exploiting supernatural forces to make the natural world a better place
         \item Working on achieving invincibility through alchemy
         \item Founder of prestigious witchcraft and wizardry academy
     \end{entrylist}
 
-% Extracurricular Activities
-\section{Extracurricular Activities}
+% Activities
+\section{Activities}
 \noindent\rule{\textwidth}{\hlineheight}
 
     Really Cool Stuff \hfill Lifetime\\
